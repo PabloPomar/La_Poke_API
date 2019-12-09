@@ -2,6 +2,8 @@ const express = require('express');
 
 const router = express.Router();
 const pokemon = require('../models/pokemon.model');
+const usuario = require('../models/usuario.model');
+const voto = require('../models/voto.model');
 
 router.get('/', (req, res) => {
     res.send('Esto tendria que devolver todos los pokemon')
@@ -15,6 +17,28 @@ router.get('/lista', (req, res) =>{
         }
         else {
             console.log("Error en reclamar la lista de pokemon: " + err);
+        }
+    });
+});
+
+router.get('/usuarios', (req, res) =>{
+    usuario.find((err, docs)=> {
+        if (!err){
+            res.json(docs);
+        }
+        else {
+            console.log("Error en reclamar la lista de usuarios: " + err);
+        }
+    });
+});
+
+router.get('/votos', (req, res) =>{
+    voto.find((err, docs)=> {
+        if (!err){
+            res.json(docs);
+        }
+        else {
+            console.log("Error en reclamar la lista de usuarios: " + err);
         }
     });
 });
