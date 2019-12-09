@@ -21,27 +21,6 @@ router.get('/lista', (req, res) =>{
     });
 });
 
-router.get('/usuarios', (req, res) =>{
-    usuario.find((err, docs)=> {
-        if (!err){
-            res.json(docs);
-        }
-        else {
-            console.log("Error en reclamar la lista de usuarios: " + err);
-        }
-    });
-});
-
-router.get('/votos', (req, res) =>{
-    voto.find((err, docs)=> {
-        if (!err){
-            res.json(docs);
-        }
-        else {
-            console.log("Error en reclamar la lista de usuarios: " + err);
-        }
-    });
-});
 
 
 router.get('/especifico', (req, res) =>{
@@ -106,6 +85,59 @@ router.get('/updateTest2', async (req, res) =>{
     const doc = await pokemon.findOne({"id" :"001"});
     doc.description = 'testeando';
     await doc.save().then(res.json(doc));
+});
+
+
+//-----------------------------------------------Hasta aca era lo de regularidad------------------------------------
+
+router.get('/usuarios', (req, res) =>{
+    usuario.find((err, docs)=> {
+        if (!err){
+            res.json(docs);
+        }
+        else {
+            console.log("Error en reclamar la lista de usuarios: " + err);
+        }
+    });
+});
+
+
+
+router.get('/votos', (req, res) =>{
+    voto.find((err, docs)=> {
+        if (!err){
+            res.json(docs);
+        }
+        else {
+            console.log("Error en reclamar la lista de votos: " + err);
+        }
+    });
+});
+
+
+
+router.get('/UserExist/:usuario', async (req, res) =>{
+    usuario.findOne({"usuario" : req.params.usuario}, (err, doc)=>{
+        if (!err){
+            if(doc===null) {
+                res.send(false);
+            } else {
+                res.send(true);
+            }
+        }
+    });
+});
+
+router.get('/YaPosteo/:usuario', async (req, res) =>{
+    pokemon.aggregate([{ $unwind: "$user_Description" }, { $match: { "user_Description.usuario": req.params.usuario , "id": "001" } } ], (err, doc)=>{
+        if (!err){
+            if(doc.length===0) {
+                res.send(false);
+            } else {
+                res.send(true);
+            }
+        }
+    });
 });
 
 
