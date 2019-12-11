@@ -128,8 +128,8 @@ router.get('/UserExist/:usuario', async (req, res) =>{
     });
 });
 
-router.get('/YaPosteo/:usuario', async (req, res) =>{
-    pokemon.aggregate([{ $unwind: "$user_Description" }, { $match: { "user_Description.usuario": req.params.usuario , "id": "001" } } ], (err, doc)=>{
+router.get('/YaPosteo/:id/:usuario', async (req, res) =>{
+    pokemon.aggregate([{ $unwind: "$user_Description" }, { $match: { "user_Description.usuario": req.params.usuario , "id": req.params.id } } ], (err, doc)=>{
         if (!err){
             if(doc.length===0) {
                 res.send(false);
@@ -139,6 +139,30 @@ router.get('/YaPosteo/:usuario', async (req, res) =>{
         }
     });
 });
+
+
+
+router.get('/UsuarioEspecifico/:usuario', async (req, res) =>{
+    usuario.findOne({"usuario" : req.params.usuario}, (err, doc)=>{
+        if (!err){
+            res.send(doc);
+        }
+    });
+});
+
+
+router.get('/YaVoto/:id/:usuario/:idDesc', async (req, res) =>{
+    voto.findOne({"id_Usuario" : req.params.usuario, "id_Pokemon" : req.params.id, "id_descripcion" : req.params.idDesc}, (err, doc)=>{
+        if (!err){
+            if(doc===null) {
+                res.send(false);
+            } else {
+                res.send(true);
+            }
+        }
+    });
+});
+
 
 
 module.exports = router;

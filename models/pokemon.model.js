@@ -1,6 +1,8 @@
 const mongoose = require ('mongoose');
 
+
 var pokemonSchema = new mongoose.Schema({
+
 
     id: {
       type: String
@@ -21,6 +23,10 @@ var pokemonSchema = new mongoose.Schema({
 
     description : {
         type: String,
+    },
+
+    user_Description: {
+        type: Array,
     },
 
 
