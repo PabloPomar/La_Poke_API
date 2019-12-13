@@ -90,7 +90,7 @@ router.get('/agregarUserDescTest', async (req, res) =>{
 router.post('/agregarUsuario', async (req, res) =>{
     newUser =  new usuario;
     newUser.usuario = req.body.usuario;
-    newUser.contraseña = req.body.contraseña;
+    newUser.password = req.body.password;
     newUser.tipo = "usuario";
     newUser.save(function (err) {
         if (err) console.log("Error al agregar usuario: " + err);
@@ -103,7 +103,7 @@ router.post('/agregarUsuario', async (req, res) =>{
 router.post('/agregarUsuarioTest', async (req, res) =>{
     newUser =  new usuario;
     newUser.usuario = "Fulano";
-    newUser.contraseña = "contraseña";
+    newUser.password = "contraseña";
     newUser.tipo = "usuario";
     newUser.save(function (err) {
         if (err) console.log("Error al agregar usuario: " + err);

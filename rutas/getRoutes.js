@@ -10,6 +10,7 @@ router.get('/', (req, res) => {
 });
 
 
+
 router.get('/lista', (req, res) =>{
     pokemon.find((err, docs)=> {
         if (!err){
@@ -31,6 +32,9 @@ router.get('/especifico', (req, res) =>{
     });
 });
 
+
+
+
 router.get('/especifico2', (req, res) =>{
     pokemon.find({"name" : /.*A*./ }, (err, doc)=>{
         if (!err){
@@ -39,6 +43,8 @@ router.get('/especifico2', (req, res) =>{
     });
 });
 
+
+/*
 router.get('/:postDesc', (req, res) =>{
     pokemon.findOne({"id" : req.params.postDesc}, (err, doc)=>{
         if (!err){
@@ -46,6 +52,7 @@ router.get('/:postDesc', (req, res) =>{
         }
     });
 });
+*/
 
 
 
@@ -88,6 +95,8 @@ router.get('/updateTest2', async (req, res) =>{
 });
 
 
+
+
 //-----------------------------------------------Hasta aca era lo de regularidad------------------------------------
 
 router.get('/usuarios', (req, res) =>{
@@ -128,6 +137,8 @@ router.get('/UserExist/:usuario', async (req, res) =>{
     });
 });
 
+
+
 router.get('/YaPosteo/:id/:usuario', async (req, res) =>{
     pokemon.aggregate([{ $unwind: "$user_Description" }, { $match: { "user_Description.usuario": req.params.usuario , "id": req.params.id } } ], (err, doc)=>{
         if (!err){
@@ -151,6 +162,7 @@ router.get('/UsuarioEspecifico/:usuario', async (req, res) =>{
 });
 
 
+
 router.get('/YaVoto/:id/:usuario/:idDesc', async (req, res) =>{
     voto.findOne({"id_Usuario" : req.params.usuario, "id_Pokemon" : req.params.id, "id_descripcion" : req.params.idDesc}, (err, doc)=>{
         if (!err){
@@ -163,6 +175,15 @@ router.get('/YaVoto/:id/:usuario/:idDesc', async (req, res) =>{
     });
 });
 
+router.get('/proxNum/:id', (req, res) =>{
+    pokemon.findOne({"id" : req.params.id}, (err, doc)=>{
+        if (!err){
+            array = doc.user_Description;
+            console.log(array.length);
+            res.json(array.length);
+        }
+    });
+});
 
 
 module.exports = router;
