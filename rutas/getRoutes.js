@@ -137,6 +137,19 @@ router.get('/UserExist/:usuario', async (req, res) =>{
     });
 });
 
+router.get('/ConfirmarUser/:usuario/:password', async (req, res) =>{
+    usuario.findOne({"usuario" : req.params.usuario , "password" : req.params.password}, (err, doc)=>{
+        if (!err){
+            if(doc===null) {
+                res.send(false);
+            } else {
+                res.send(true);
+            }
+        }
+    });
+});
+
+
 
 
 router.get('/YaPosteo/:id/:usuario', async (req, res) =>{
@@ -156,7 +169,7 @@ router.get('/YaPosteo/:id/:usuario', async (req, res) =>{
 router.get('/UsuarioEspecifico/:usuario', async (req, res) =>{
     usuario.findOne({"usuario" : req.params.usuario}, (err, doc)=>{
         if (!err){
-            res.send(doc);
+            res.send(JSON.stringify(doc.tipo));
         }
     });
 });
