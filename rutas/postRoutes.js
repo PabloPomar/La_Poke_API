@@ -73,6 +73,7 @@ router.get('/agregarUserDescTest', async (req, res) =>{
     desc.usuario = "alberto";
     desc.descripcion = "Test pasado";
     desc.likes = 2;
+    desc.fecha = new Date();
     desc.dislikes = 1;
     pokemon.findOne({ "id": "003" }, async (err, doc) => {
         if (!err) {

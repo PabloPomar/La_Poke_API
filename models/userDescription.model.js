@@ -18,12 +18,16 @@ var userDescriptionSchema = new mongoose.Schema({
     likes: {
         type: Number,
     },
-
+    fecha: {
+        type: Date,
+    },
     dislikes: {
         type: Number,
     },
 
 
 });
+
+
 
 module.exports = mongoose.model('user_description', userDescriptionSchema);
