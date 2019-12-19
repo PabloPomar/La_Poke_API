@@ -193,7 +193,7 @@ router.get('/proxNum/:id', (req, res) =>{
     pokemon.findOne({"id" : req.params.id}, (err, doc)=>{
         if (!err){
             array = doc.user_Description;
-            console.log(array.length);
+            //console.log(array.length);
             res.json(array.length);
         }
     });

@@ -53,9 +53,16 @@ router.post('/updateTest2', async (req, res) =>{
 
 
 router.post('/agregarUserDesc', async (req, res) =>{
-    pokemon.findOne({ "id": req.body.id }, async (err, doc) => {
+    desc = new userDescription;
+    desc.idDescripcion = req.body.idDescripcion;
+    desc.usuario = req.body.usuario;
+    desc.descripcion = req.body.descripcion;
+    desc.likes = 0;
+    desc.fecha = new Date();
+    desc.dislike = 0;
+    pokemon.findOne({ "id": req.body.idPokemon }, async (err, doc) => {
         if (!err) {
-            doc.user_Description.push(req.body.user_Description);
+            doc.user_Description.push(desc);
             await doc.save().then(
                 res.json(doc))
         }
@@ -144,7 +151,7 @@ router.post('/agregarVoto', async (req, res) =>{
 });
 
 router.post('/BorrarUserDesc', async (req, res) =>{
-    pokemon.updateOne({ "id": req.body.id } , { $pull: {"user_Description": { "idDescripcion" : req.body.idDescripcion} } }, async (err, doc) => {
+    pokemon.updateOne({ "id": req.body.idPokemon } , { $pull: {"user_Description": { "idDescripcion" : req.body.idDescripcion} } }, async (err, doc) => {
         if (!err) {
             console.log("Borrado");
             res.send(doc);
@@ -154,6 +161,18 @@ router.post('/BorrarUserDesc', async (req, res) =>{
         }
 
     });
+});
+
+router.post('/BorrarVotos', async (req, res) =>{
+    voto.remove({"id_pokemon": req.body.idPokemon , "id_descipcion" :  req.body.idDescripcion}, async (err, doc) => {
+        if (!err) {
+            console.log("Votos Borrados");
+        }
+        else {
+            console.log("Error al borrar descripcion: " + err);
+        }
+
+    })
 });
 
 router.post('/BorrarUserDescTest', async (req, res) =>{

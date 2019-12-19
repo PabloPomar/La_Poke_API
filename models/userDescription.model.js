@@ -21,7 +21,7 @@ var userDescriptionSchema = new mongoose.Schema({
     fecha: {
         type: Date,
     },
-    dislikes: {
+    dislike: {
         type: Number,
     },
 
