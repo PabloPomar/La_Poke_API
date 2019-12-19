@@ -69,7 +69,7 @@ router.post('/agregarUserDesc', async (req, res) =>{
 
 router.get('/agregarUserDescTest', async (req, res) =>{
     desc = new userDescription;
-    desc.idDescripcion = 4;
+    desc.idDescripcion = 2;
     desc.usuario = "alberto";
     desc.descripcion = "Test pasado";
     desc.likes = 2;
@@ -114,8 +114,25 @@ router.post('/agregarUsuarioTest', async (req, res) =>{
 });
 
 
-router.post('/agregarVoto', async (req, res) =>{
+
+
+
+router.get('/agregarVotoTest', async (req, res) =>{
     newVoto =  new voto;
+    newVoto.id_pokemon = 'nada1';
+    newVoto.id_descipcion = 'nada1';
+    newVoto.id_usuario = 'nadieImportante1';
+    newVoto.save(function (err) {
+        if (err) console.log("Error al agregar voto: " + err);
+        // saved!
+    });
+    res.json(newVoto);
+});
+
+router.post('/agregarVoto', async (req, res) =>{
+    //console.log('entro aca');
+    newVoto =  new voto;
+    //console.log("El body esta pasando:" + req.body);
     newVoto.id_pokemon = req.body.id_pokemon;
     newVoto.id_descipcion = req.body.id_descipcion;
     newVoto.id_usuario = req.body.id_usuario;
@@ -126,21 +143,7 @@ router.post('/agregarVoto', async (req, res) =>{
     res.json(newVoto);
 });
 
-
-router.post('/agregarVotoTest', async (req, res) =>{
-    newVoto =  new voto;
-    newVoto.id_pokemon = "001";
-    newVoto.id_descipcion = "1";
-    newVoto.id_usuario = "nadieImportante";
-    newVoto.save(function (err) {
-        if (err) console.log("Error al agregar voto: " + err);
-        // saved!
-    });
-    res.json(newVoto);
-});
-
-
-router.get('/BorrarUserDesc', async (req, res) =>{
+router.post('/BorrarUserDesc', async (req, res) =>{
     pokemon.updateOne({ "id": req.body.id } , { $pull: {"user_Description": { "idDescripcion" : req.body.idDescripcion} } }, async (err, doc) => {
         if (!err) {
             console.log("Borrado");
@@ -153,7 +156,7 @@ router.get('/BorrarUserDesc', async (req, res) =>{
     });
 });
 
-router.get('/BorrarUserDescTest', async (req, res) =>{
+router.post('/BorrarUserDescTest', async (req, res) =>{
     pokemon.updateOne({ "id": "003" } , { $pull: {"user_Description": { "idDescripcion" : 4} } }, async (err, doc) => {
         if (!err) {
             console.log("Borrado");
@@ -167,5 +170,42 @@ router.get('/BorrarUserDescTest', async (req, res) =>{
 });
 
 
+
+
+router.get('/aumentarLike/:id/:idDesc', async (req, res) =>{
+    pokemon.updateOne( {id: req.params.id, "user_Description.idDescripcion": parseInt(req.params.idDesc)} , {$inc:{"user_Description.$.likes":1}} , (err, doc)=>{
+        if (!err){
+            console.log("Actualizado");
+        }
+    });
+});
+
+router.get('/aumentarDislike/:id/:idDesc', async (req, res) =>{
+    pokemon.updateOne( {id: req.params.id, "user_Description.idDescripcion":  parseInt(req.params.idDesc)} , {$inc:{"user_Description.$.dislike":1}} , (err, doc)=>{
+        if (!err){
+            console.log("Actualizado");
+        }
+    });
+});
+
+
+router.get('/aumentarLikeTest', async (req, res) =>{
+    pokemon.updateOne( {id:"003", "user_Description.idDescripcion": 1} , {$inc:{"user_Description.$.likes":1}} , (err, doc)=>{
+        if (!err){
+            res.send(doc);
+            console.log("Actualizado");
+        }
+    });
+});
+
+
+router.get('/aumentarDislikeTest', async (req, res) =>{
+    pokemon.updateOne( {id:"003", "user_Description.idDescripcion": 1} , {$inc:{"user_Description.$.dislike":1}} , (err, doc)=>{
+        if (!err){
+            res.send(doc);
+            console.log("Actualizado");
+        }
+    });
+});
 
 module.exports = router;

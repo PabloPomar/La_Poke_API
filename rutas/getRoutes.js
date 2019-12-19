@@ -177,7 +177,7 @@ router.get('/UsuarioEspecifico/:usuario', async (req, res) =>{
 
 
 router.get('/YaVoto/:id/:usuario/:idDesc', async (req, res) =>{
-    voto.findOne({"id_Usuario" : req.params.usuario, "id_Pokemon" : req.params.id, "id_descripcion" : req.params.idDesc}, (err, doc)=>{
+    voto.findOne({"id_usuario" : req.params.usuario, "id_pokemon" : req.params.id, "id_descipcion" : req.params.idDesc}, (err, doc)=>{
         if (!err){
             if(doc===null) {
                 res.send(false);
@@ -187,6 +187,7 @@ router.get('/YaVoto/:id/:usuario/:idDesc', async (req, res) =>{
         }
     });
 });
+
 
 router.get('/proxNum/:id', (req, res) =>{
     pokemon.findOne({"id" : req.params.id}, (err, doc)=>{
