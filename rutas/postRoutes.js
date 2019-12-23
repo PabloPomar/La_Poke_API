@@ -14,12 +14,14 @@ router.get('/', (req, res) => {
 router.post('/updateDescription', async (req, res) =>{
     pokemon.findOne({ _id: req.body._id }, async (err, doc) => {
         if (!err) {
+            res.status(200);
             doc.description = req.body.description;
             await doc.save().then(
                 res.json(doc))
         }
         else {
             console.log("Error al actualizar descripcion de pokemon: " + err);
+            res.sendStatus(404);
         }
 
     });
@@ -29,12 +31,14 @@ router.post('/updateDescription', async (req, res) =>{
 router.post('/updateDescription2', async (req, res) =>{
     pokemon.findOne({ "id": req.body.id }, async (err, doc) => {
         if (!err) {
+            res.status(200);
             doc.description = req.body.description;
             await doc.save().then(
                 res.json(doc))
         }
         else {
             console.log("Error al actualizar descripcion de pokemon: " + err);
+            res.sendStatus(404);
         }
 
     });
@@ -62,12 +66,14 @@ router.post('/agregarUserDesc', async (req, res) =>{
     desc.dislike = 0;
     pokemon.findOne({ "id": req.body.idPokemon }, async (err, doc) => {
         if (!err) {
+            res.status(201);
             doc.user_Description.push(desc);
             await doc.save().then(
                 res.json(doc))
         }
         else {
             console.log("Error al actualizar descripcion de usuario pokemon: " + err);
+            res.sendStatus(404);
         }
 
     });
@@ -101,7 +107,12 @@ router.post('/agregarUsuario', async (req, res) =>{
     newUser.password = req.body.password;
     newUser.tipo = "usuario";
     newUser.save(function (err) {
-        if (err) console.log("Error al agregar usuario: " + err);
+        if (err) {
+            res.sendStatus(400);
+            console.log("Error al agregar usuario: " + err);
+        } else {
+            res.status(200);
+        }
         // saved!
     });
     res.json(newUser);
@@ -130,7 +141,12 @@ router.get('/agregarVotoTest', async (req, res) =>{
     newVoto.id_descipcion = 'nada1';
     newVoto.id_usuario = 'nadieImportante1';
     newVoto.save(function (err) {
-        if (err) console.log("Error al agregar voto: " + err);
+        if (err){
+            res.sendStatus(400);
+            console.log("Error al agregar voto: " + err);
+        }  else {
+            res.status(201);
+        }
         // saved!
     });
     res.json(newVoto);
@@ -144,7 +160,12 @@ router.post('/agregarVoto', async (req, res) =>{
     newVoto.id_descipcion = req.body.id_descipcion;
     newVoto.id_usuario = req.body.id_usuario;
     newVoto.save(function (err) {
-        if (err) console.log("Error al agregar voto: " + err);
+        if (err){
+            res.sendStatus(400);
+            console.log("Error al agregar voto: " + err);
+        } else {
+            res.status(201);
+        }
         // saved!
     });
     res.json(newVoto);
@@ -153,10 +174,12 @@ router.post('/agregarVoto', async (req, res) =>{
 router.post('/BorrarUserDesc', async (req, res) =>{
     pokemon.updateOne({ "id": req.body.idPokemon } , { $pull: {"user_Description": { "idDescripcion" : req.body.idDescripcion} } }, async (err, doc) => {
         if (!err) {
+            res.status(200);
             console.log("Borrado");
             res.send(doc);
         }
         else {
+            res.sendStatus(404);
             console.log("Error al borrar descripcion: " + err);
         }
 
@@ -166,9 +189,11 @@ router.post('/BorrarUserDesc', async (req, res) =>{
 router.post('/BorrarVotos', async (req, res) =>{
     voto.remove({"id_pokemon": req.body.idPokemon , "id_descipcion" :  req.body.idDescripcion}, async (err, doc) => {
         if (!err) {
+            res.status(200);
             console.log("Votos Borrados");
         }
         else {
+            res.sendStatus(404);
             console.log("Error al borrar descripcion: " + err);
         }
 
@@ -194,7 +219,11 @@ router.post('/BorrarUserDescTest', async (req, res) =>{
 router.get('/aumentarLike/:id/:idDesc', async (req, res) =>{
     pokemon.updateOne( {id: req.params.id, "user_Description.idDescripcion": parseInt(req.params.idDesc)} , {$inc:{"user_Description.$.likes":1}} , (err, doc)=>{
         if (!err){
+            res.status(200);
             console.log("Actualizado");
+        } else {
+            res.sendStatus(404);
+            console.log("Error al aumentar likes: " + err);
         }
     });
 });
@@ -202,7 +231,11 @@ router.get('/aumentarLike/:id/:idDesc', async (req, res) =>{
 router.get('/aumentarDislike/:id/:idDesc', async (req, res) =>{
     pokemon.updateOne( {id: req.params.id, "user_Description.idDescripcion":  parseInt(req.params.idDesc)} , {$inc:{"user_Description.$.dislike":1}} , (err, doc)=>{
         if (!err){
+            res.status(200);
             console.log("Actualizado");
+        } else {
+            res.sendStatus(404);
+            console.log("Error al aumentar dislikes: " + err);
         }
     });
 });
