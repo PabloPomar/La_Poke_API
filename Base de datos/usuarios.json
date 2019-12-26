@@ -1,0 +1,6 @@
+{"_id":{"$oid":"5dee70fc0d242b3554877e10"},"usuario":"admin1","password":"admin","tipo":"admin"}
+{"_id":{"$oid":"5deeba5f89ebfc1060024d26"},"usuario":"admin2","password":"admin2con","tipo":"admin"}
+{"_id":{"$oid":"5defdd5f5e560126e8a6e173"},"usuario":"Fulano","password":"contraseña","tipo":"usuario","__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5dfad2629013c52348c0bc06"},"usuario":"usuario1","password":"Usuario1","tipo":"usuario","__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5dfad70c7ad40d0bfcc0031f"},"usuario":"usuario2","password":"Usuario2","tipo":"usuario","__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5e05028cddfe5018ec57679d"},"usuario":"usuario3","password":"Usuario3","tipo":"usuario","__v":{"$numberInt":"0"}}

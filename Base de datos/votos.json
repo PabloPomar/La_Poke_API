@@ -1,0 +1,10 @@
+{"_id":{"$oid":"5dfa67219150ec38e8069076"},"id_pokemon":"003","id_descipcion":"1","id_usuario":"nadieImportante","__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5dfa676224decb148cccde6b"},"id_pokemon":"nada","id_descipcion":"nada","id_usuario":"nadieImportante","__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5dfad4147ad40d0bfcc0031c"},"id_pokemon":"003","id_descipcion":"2","id_usuario":"Pablo Pomar","__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5dfad44a7ad40d0bfcc0031d"},"id_pokemon":"003","id_descipcion":"1","id_usuario":"Pablo Pomar","__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5dfad49a7ad40d0bfcc0031e"},"id_pokemon":"003","id_descipcion":"2","id_usuario":"admin1","__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5dfad7297ad40d0bfcc00320"},"id_pokemon":"003","id_descipcion":"2","id_usuario":"usuario2","__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5dfad76c7ad40d0bfcc00321"},"id_pokemon":"003","id_descipcion":"1","id_usuario":"usuario2","__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5e0137052c96cf411038a91a"},"id_pokemon":"003","id_descipcion":"2","id_usuario":"usuario1","__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5e013a2b60c17436acd166ec"},"id_pokemon":"003","id_descipcion":"1","id_usuario":"admin1","__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5e04e7677658962dc44ea521"},"id_pokemon":"003","id_descipcion":"1","id_usuario":"usuario1","__v":{"$numberInt":"0"}}
