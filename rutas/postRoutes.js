@@ -156,9 +156,9 @@ router.post('/agregarVoto', async (req, res) =>{
     //console.log('entro aca');
     newVoto =  new voto;
     //console.log("El body esta pasando:" + req.body);
-    newVoto.id_pokemon = req.body.id_pokemon;
-    newVoto.id_descipcion = req.body.id_descipcion;
-    newVoto.id_usuario = req.body.id_usuario;
+    newVoto.id_pokemon = req.body.idpokemon;
+    newVoto.id_descipcion = req.body.iddescipcion;
+    newVoto.id_usuario = req.body.idusuario;
     newVoto.save(function (err) {
         if (err){
             res.sendStatus(400);

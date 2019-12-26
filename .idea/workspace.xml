@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="93ece65c-366a-4fb1-8946-cded7db8c6c8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/models/clave.model.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rutas/getRoutes.js" beforeDir="false" afterPath="$PROJECT_DIR$/rutas/getRoutes.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rutas/postRoutes.js" beforeDir="false" afterPath="$PROJECT_DIR$/rutas/postRoutes.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -21,16 +19,16 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/models/voto.model.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="20" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="20" />
+            <state relative-caret-position="238">
+              <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/rutas/getRoutes.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="101">
+            <state relative-caret-position="458">
               <caret line="264" column="30" selection-start-line="264" selection-start-column="30" selection-end-line="264" selection-end-column="30" />
             </state>
           </provider>
@@ -45,11 +43,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/rutas/postRoutes.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-18">
-              <caret line="237" column="46" selection-start-line="237" selection-start-column="46" selection-end-line="237" selection-end-column="46" />
+            <state relative-caret-position="187">
+              <caret line="187" lean-forward="true" selection-start-line="187" selection-end-line="187" />
             </state>
           </provider>
         </entry>
@@ -75,7 +73,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/models/pokemon.model.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
+            <state relative-caret-position="289">
               <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
             </state>
           </provider>
@@ -84,7 +82,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/models/userDescription.model.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
+            <state relative-caret-position="340">
               <caret line="23" column="11" selection-start-line="23" selection-start-column="11" selection-end-line="23" selection-end-column="11" />
             </state>
           </provider>
@@ -93,7 +91,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/models/usuario.model.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
+            <state relative-caret-position="30">
               <caret line="13" column="12" selection-start-line="13" selection-start-column="12" selection-end-line="13" selection-end-column="12" />
             </state>
           </provider>
@@ -120,18 +118,18 @@
         <option value="$PROJECT_DIR$/Seed/Instrucciones.md" />
         <option value="$PROJECT_DIR$/models/pokemon.model.js" />
         <option value="$PROJECT_DIR$/models/usuario.model.js" />
-        <option value="$PROJECT_DIR$/models/voto.model.js" />
         <option value="$PROJECT_DIR$/models/userDescription2.model.js" />
         <option value="$PROJECT_DIR$/models/userDescription.model.js" />
         <option value="$PROJECT_DIR$/models/clave.model.js" />
+        <option value="$PROJECT_DIR$/models/voto.model.js" />
         <option value="$PROJECT_DIR$/rutas/getRoutes.js" />
         <option value="$PROJECT_DIR$/rutas/postRoutes.js" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="-2" />
-    <option name="y" value="2" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-16" />
+    <option name="y" value="8" />
     <option name="width" value="1386" />
     <option name="height" value="703" />
   </component>
@@ -246,7 +244,8 @@
       <workItem from="1576687324456" duration="8224000" />
       <workItem from="1576707037333" duration="6929000" />
       <workItem from="1576766910775" duration="7088000" />
-      <workItem from="1577129126680" duration="7542000" />
+      <workItem from="1577129126680" duration="7603000" />
+      <workItem from="1577378269896" duration="3786000" />
     </task>
     <task id="LOCAL-00001" summary="Agregado de los demas schemas">
       <created>1575914069076</created>
@@ -304,11 +303,18 @@
       <option name="project" value="LOCAL" />
       <updated>1576784052670</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Agrege el metodo para obtener la clave y los status en las respuestas&#10;del servidor.">
+      <created>1577138872718</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1577138872718</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="118076000" />
+    <option name="totallyTimeSpent" value="121923000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -320,10 +326,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-2" y="2" width="1386" height="703" extended-state="0" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.7526042" visible="true" weight="0.24925816" />
-      <window_info id="Structure" order="1" sideWeight="0.24739583" side_tool="true" visible="true" weight="0.24925816" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.75058824" visible="true" weight="0.25" />
+      <window_info id="Structure" order="1" sideWeight="0.24941176" side_tool="true" visible="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -332,11 +338,11 @@
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.3289689" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32807016" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32982457" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.3263158" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.30441898" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -354,7 +360,8 @@
     <MESSAGE value="Modifique el Modelo de user description para que incluya la fecha." />
     <MESSAGE value="Correccion de errores." />
     <MESSAGE value="Modificacion de los metodos para borrar votos y descripciones de usuarios." />
-    <option name="LAST_COMMIT_MESSAGE" value="Modificacion de los metodos para borrar votos y descripciones de usuarios." />
+    <MESSAGE value="Agrege el metodo para obtener la clave y los status en las respuestas&#10;del servidor." />
+    <option name="LAST_COMMIT_MESSAGE" value="Agrege el metodo para obtener la clave y los status en las respuestas&#10;del servidor." />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/package.json">
@@ -402,10 +409,10 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/models/userDescription2.model.js" />
-    <entry file="file://$PROJECT_DIR$/models/voto.model.js">
+    <entry file="file://$PROJECT_DIR$/models/clave.model.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="20" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="20" />
+        <state relative-caret-position="68">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
         </state>
       </provider>
     </entry>
@@ -423,45 +430,45 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/userDescription.model.js">
+    <entry file="file://$PROJECT_DIR$/models/usuario.model.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="11" selection-start-line="23" selection-start-column="11" selection-end-line="23" selection-end-column="11" />
+        <state relative-caret-position="30">
+          <caret line="13" column="12" selection-start-line="13" selection-start-column="12" selection-end-line="13" selection-end-column="12" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/usuario.model.js">
+    <entry file="file://$PROJECT_DIR$/models/userDescription.model.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="12" selection-start-line="13" selection-start-column="12" selection-end-line="13" selection-end-column="12" />
+        <state relative-caret-position="340">
+          <caret line="23" column="11" selection-start-line="23" selection-start-column="11" selection-end-line="23" selection-end-column="11" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/models/pokemon.model.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
+        <state relative-caret-position="289">
           <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/clave.model.js">
+    <entry file="file://$PROJECT_DIR$/models/voto.model.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rutas/getRoutes.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="101">
-          <caret line="264" column="30" selection-start-line="264" selection-start-column="30" selection-end-line="264" selection-end-column="30" />
+        <state relative-caret-position="238">
+          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/rutas/postRoutes.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-18">
-          <caret line="237" column="46" selection-start-line="237" selection-start-column="46" selection-end-line="237" selection-end-column="46" />
+        <state relative-caret-position="187">
+          <caret line="187" lean-forward="true" selection-start-line="187" selection-end-line="187" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rutas/getRoutes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="458">
+          <caret line="264" column="30" selection-start-line="264" selection-start-column="30" selection-end-line="264" selection-end-column="30" />
         </state>
       </provider>
     </entry>
