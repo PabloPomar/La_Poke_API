@@ -52,16 +52,6 @@ router.get('/especifico2', (req, res) =>{
 });
 
 
-/*
-router.get('/:postDesc', (req, res) =>{
-    pokemon.findOne({"id" : req.params.postDesc}, (err, doc)=>{
-        if (!err){
-            res.send(doc);
-        }
-    });
-});
-*/
-
 
 
 router.get('/name/:nameLike', (req, res) =>{
@@ -95,26 +85,6 @@ router.get('/find/:_id', (req, res) =>{
         }
     });
 });
-
-
-router.get('/updateTest', async (req, res) =>{
-    pokemon.findOne({"id" :"001"}, async (err, doc) => {
-        if (!err) {
-            doc.description = 'Testeando mas';
-            await doc.save().then(
-                res.json(doc)
-            );
-
-        }
-    });
-});
-
-router.get('/updateTest2', async (req, res) =>{
-    const doc = await pokemon.findOne({"id" :"001"});
-    doc.description = 'testeando';
-    await doc.save().then(res.json(doc));
-});
-
 
 
 
@@ -175,7 +145,7 @@ router.get('/ConfirmarUser/:usuario/:password', async (req, res) =>{
                 res.status(200);
                 res.send(false);
             } else {
-                res.status(200)
+                res.status(200);
                 res.send(true);
             }
         } else {
@@ -243,7 +213,6 @@ router.get('/proxNum/:id', (req, res) =>{
     pokemon.findOne({"id" : req.params.id}, (err, doc)=>{
         if (!err){
             array = doc.user_Description;
-            //console.log(array.length);
             res.status(200);
             res.json(array.length);
         }
