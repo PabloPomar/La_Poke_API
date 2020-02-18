@@ -171,6 +171,8 @@ router.post('/agregarVoto', async (req, res) =>{
     res.json(newVoto);
 });
 
+/*
+
 router.post('/BorrarUserDesc', async (req, res) =>{
     pokemon.updateOne({ "id": req.body.idPokemon } , { $pull: {"user_Description": { "idDescripcion" : req.body.idDescripcion} } }, async (err, doc) => {
         if (!err) {
@@ -213,7 +215,7 @@ router.post('/BorrarUserDescTest', async (req, res) =>{
     });
 });
 
-
+*/
 
 
 router.get('/aumentarLike/:id/:idDesc', async (req, res) =>{

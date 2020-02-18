@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="93ece65c-366a-4fb1-8946-cded7db8c6c8" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/rutas/deleteRoutes.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rutas/postRoutes.js" beforeDir="false" afterPath="$PROJECT_DIR$/rutas/postRoutes.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -16,40 +19,28 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/models/voto.model.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="20" selection-start-line="20" selection-end-line="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/rutas/getRoutes.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="343">
-              <caret line="264" column="30" selection-start-line="264" selection-start-column="30" selection-end-line="264" selection-end-column="30" />
+            <state relative-caret-position="244">
+              <caret line="270" selection-start-line="270" selection-end-line="270" selection-end-column="24" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Seed/Instrucciones.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="102">
-                <caret line="6" column="54" selection-start-line="6" selection-start-column="54" selection-end-line="6" selection-end-column="54" />
-              </first_editor>
-              <second_editor />
+        <entry file="file://$PROJECT_DIR$/rutas/deleteRoutes.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-85">
+              <caret line="10" column="42" selection-start-line="10" selection-start-column="42" selection-end-line="10" selection-end-column="42" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/models/clave.model.js">
+        <entry file="file://$PROJECT_DIR$/models/db.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" selection-start-line="4" selection-end-line="4" />
+            <state relative-caret-position="85">
+              <caret line="5" selection-start-line="5" selection-end-line="5" />
             </state>
           </provider>
         </entry>
@@ -57,8 +48,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/rutas/postRoutes.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3179">
-              <caret line="187" selection-start-line="187" selection-end-line="187" />
+            <state relative-caret-position="1587">
+              <caret line="217" column="2" selection-start-line="217" selection-start-column="2" selection-end-line="217" selection-end-column="2" />
             </state>
           </provider>
         </entry>
@@ -75,8 +66,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" column="17" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="17" />
+            <state relative-caret-position="289">
+              <caret line="20" column="19" lean-forward="true" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -85,7 +76,7 @@
         <entry file="file://$PROJECT_DIR$/models/pokemon.model.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="595">
-              <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
+              <caret line="35" selection-start-line="35" selection-end-line="35" />
             </state>
           </provider>
         </entry>
@@ -108,6 +99,15 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/models/voto.model.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="20" selection-start-line="20" selection-end-line="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -124,7 +124,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/models/db.js" />
-        <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/Seed/Instrucciones.md" />
         <option value="$PROJECT_DIR$/models/pokemon.model.js" />
@@ -134,13 +133,16 @@
         <option value="$PROJECT_DIR$/models/clave.model.js" />
         <option value="$PROJECT_DIR$/models/voto.model.js" />
         <option value="$PROJECT_DIR$/rutas/getRoutes.js" />
+        <option value="$PROJECT_DIR$/Base de datos/Instrucciones.md" />
+        <option value="$PROJECT_DIR$/app.js" />
+        <option value="$PROJECT_DIR$/rutas/deleteRoutes.js" />
         <option value="$PROJECT_DIR$/rutas/postRoutes.js" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="39" />
-    <option name="y" value="71" />
+    <option name="x" value="30" />
+    <option name="y" value="13" />
     <option name="width" value="1386" />
     <option name="height" value="703" />
   </component>
@@ -156,6 +158,11 @@
             <path>
               <item name="mi_poke_api" type="b2602c69:ProjectViewProjectNode" />
               <item name="mi_poke_api" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mi_poke_api" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mi_poke_api" type="462c0819:PsiDirectoryNode" />
+              <item name="Base de datos" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="mi_poke_api" type="b2602c69:ProjectViewProjectNode" />
@@ -191,6 +198,9 @@
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\ciber\WebstormProjects\mi_poke_api\Base de datos" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\ciber\WebstormProjects\mi_poke_api\Seed" />
     </key>
@@ -257,7 +267,14 @@
       <workItem from="1576766910775" duration="7088000" />
       <workItem from="1577129126680" duration="7603000" />
       <workItem from="1577378269896" duration="4044000" />
-      <workItem from="1577387281958" duration="533000" />
+      <workItem from="1577387281958" duration="1009000" />
+      <workItem from="1580748093903" duration="376000" />
+      <workItem from="1580918446911" duration="325000" />
+      <workItem from="1581698096267" duration="123000" />
+      <workItem from="1581698452007" duration="188000" />
+      <workItem from="1581954866375" duration="124000" />
+      <workItem from="1581966356609" duration="1295000" />
+      <workItem from="1582029485896" duration="6776000" />
     </task>
     <task id="LOCAL-00001" summary="Agregado de los demas schemas">
       <created>1575914069076</created>
@@ -329,11 +346,18 @@
       <option name="project" value="LOCAL" />
       <updated>1577387093460</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Base de datos incluida">
+      <created>1577387975671</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1577387975671</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="122714000" />
+    <option name="totallyTimeSpent" value="132397000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -345,11 +369,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="382" y="406" width="1386" height="703" extended-state="0" />
-    <editor active="true" />
+    <frame x="30" y="13" width="1386" height="703" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.7473958" visible="true" weight="0.24925816" />
-      <window_info id="Structure" order="1" sideWeight="0.25260416" side_tool="true" visible="true" weight="0.24925816" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.7291667" visible="true" weight="0.24925816" />
+      <window_info id="Structure" order="1" sideWeight="0.27083334" side_tool="true" visible="true" weight="0.24925816" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -362,7 +385,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32982457" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.3263158" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.3263158" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -382,7 +405,8 @@
     <MESSAGE value="Modificacion de los metodos para borrar votos y descripciones de usuarios." />
     <MESSAGE value="Agrege el metodo para obtener la clave y los status en las respuestas&#10;del servidor." />
     <MESSAGE value="Proyecto funcionando." />
-    <option name="LAST_COMMIT_MESSAGE" value="Proyecto funcionando." />
+    <MESSAGE value="Base de datos incluida" />
+    <option name="LAST_COMMIT_MESSAGE" value="Base de datos incluida" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/package.json">
@@ -412,18 +436,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/db.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+    <entry file="file://$PROJECT_DIR$/models/userDescription2.model.js" />
+    <entry file="file://$PROJECT_DIR$/Seed/Instrucciones.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="102">
+            <caret line="6" column="54" selection-start-line="6" selection-start-column="54" selection-end-line="6" selection-end-column="54" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/userDescription2.model.js" />
-    <entry file="file://$PROJECT_DIR$/models/voto.model.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" selection-start-line="20" selection-end-line="20" />
+    <entry file="file://$PROJECT_DIR$/Base de datos/pokemons.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Base de datos/Instrucciones.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="136">
+            <caret line="8" column="50" selection-start-line="8" selection-start-column="50" selection-end-line="8" selection-end-column="50" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
@@ -434,10 +467,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rutas/postRoutes.js">
+    <entry file="file://$PROJECT_DIR$/models/db.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3179">
-          <caret line="187" selection-start-line="187" selection-end-line="187" />
+        <state relative-caret-position="85">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
         </state>
       </provider>
     </entry>
@@ -448,17 +481,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="17" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/models/pokemon.model.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="595">
-          <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
+          <caret line="35" selection-start-line="35" selection-end-line="35" />
         </state>
       </provider>
     </entry>
@@ -476,20 +502,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rutas/getRoutes.js">
+    <entry file="file://$PROJECT_DIR$/models/voto.model.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="343">
-          <caret line="264" column="30" selection-start-line="264" selection-start-column="30" selection-end-line="264" selection-end-column="30" />
+        <state relative-caret-position="340">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Seed/Instrucciones.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="102">
-            <caret line="6" column="54" selection-start-line="6" selection-start-column="54" selection-end-line="6" selection-end-column="54" />
-          </first_editor>
-          <second_editor />
+    <entry file="file://$PROJECT_DIR$/rutas/getRoutes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="244">
+          <caret line="270" selection-start-line="270" selection-end-line="270" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="20" column="19" lean-forward="true" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rutas/postRoutes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1587">
+          <caret line="217" column="2" selection-start-line="217" selection-start-column="2" selection-end-line="217" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rutas/deleteRoutes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-85">
+          <caret line="10" column="42" selection-start-line="10" selection-start-column="42" selection-end-line="10" selection-end-column="42" />
         </state>
       </provider>
     </entry>

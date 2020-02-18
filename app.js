@@ -14,9 +14,11 @@ app.use(bodyparser.json());
 
 const getRutas = require('./rutas/getRoutes');
 const postRutas = require('./rutas/postRoutes');
+const deleteRutas = require('./rutas/deleteRoutes');
 
 app.use('/APIget', getRutas);
 app.use('/APIpost', postRutas);
+app.use('/APIdelete', deleteRutas);
 
 // Rutas
 
